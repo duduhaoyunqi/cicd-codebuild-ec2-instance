@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # fail on any error
-set- eu
+set -eu
 
 sudo yum install -y yum-utils shadow-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
