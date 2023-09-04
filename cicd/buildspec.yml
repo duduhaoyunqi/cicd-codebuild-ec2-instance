@@ -1,0 +1,19 @@
+version: 0.2
+        
+phases:
+  install:
+    runtime-versions:
+      python: 3.x
+    
+  pre_build:
+    commands:
+      - cd cicd
+      - chmod +x install_terraform.sh  configure-named-profile.sh apply_terraform.sh
+      - ./install_terraform.sh
+      - ./configure-named-profile.sh
+
+  build:
+    commands:
+      - ./apply.terraform.sh
+
+  
