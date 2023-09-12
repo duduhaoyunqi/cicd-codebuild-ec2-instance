@@ -2,6 +2,7 @@
 sudo su
 yum update -y
 yum install -y httpd wget
+sed -i '/^Listen 80/cListen 9999' /etc/httpd/conf/httpd.conf
 cd /var/www/html
 wget https://github.com/azeezsalu/jupiter/archive/refs/heads/main.zip
 unzip main.zip
