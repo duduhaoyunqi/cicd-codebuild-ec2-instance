@@ -41,6 +41,6 @@ resource "aws_instance" "app_server" {
   instance_type = "t2.micro"
   subnet_id     = "subnet-03a8a5b36aa48ac7a"
   vpc_security_group_ids  = [aws_security_group.ec2_security_group.id]
-  key_name = "Benzccc-Rsa-Dev"
+  key_name = "test"
   user_data = file("install-app.sh")
 }
